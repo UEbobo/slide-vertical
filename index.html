@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>向上无缝滚动</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .scrool-wrap {
+        margin: 50px 20px;
+        height: 210px;
+        width: 200px;
+        overflow: hidden;
+        /* border:1px red solid; */
+        text-align: center;
+    }
+    .scrool-wrap a {
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        color: #666;
+        text-decoration: none;
+    }
+    
+    .scrool-wrap a:hover {
+        color: #666;
+        text-decoration: underline;
+    }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bobo-scrool.js"></script>
+    <script>
+    var data = [{
+        'name': 'jQuery向上滚动插件1',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件2',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件3',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件4',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件5',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件6',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件7',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件8',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件9',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件10',
+        'src': 'http://www.baidu.com'
+    }, {
+        'name': 'jQuery向上滚动插件11',
+        'src': 'http://www.baidu.com'
+    }];
+    $(function() {
+        $('#scrool').scrool({
+            dataSource: data, // 数据
+            rowHeight: 30, // 行高
+            speend: 50, // 速度，越大速度越慢
+            direction: 'top' // top向上，bottom向下
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <div class="scrool-wrap" id="scrool">
+        <div class="scrool-inner">
+        </div>
+    </div>
+</body>
+
+</html>
